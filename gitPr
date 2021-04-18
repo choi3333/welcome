@@ -1,0 +1,35 @@
+git log -p
+
+//앞소스와 뒤소스 차이점 소개
+git diff 소스코드 ... 소스코드 
+
+ex)
+git log master..exp --> 버전과 차이 확인 (exp에는 있고 마스터는 없는거
+$ git log -p master ..exp  --> 안에 소스 코드도 확인
+
+
+reset --> 공유하기 이전에만 가능
+revert  -->이전 버전으로 돌리는데 새로운 버전을 생성
+
+
+//버전 숨기기
+git stash
+$ git stash pop --> 숨겨둔파일을 저장하고 삭제하다
+
+
+//부모 파일에 remote 파일 저장소 생성
+$ git init --bare remote
+
+//로컬 파일에서 해당 파일 디렉토리와 remote파일을 연결
+ git remote add origin /c/Users/최상혁/desktop/코딩연습/생활코딩/remote
+
+
+git push를 통해 입력 
+git pull을 통해 내용 로컬에 저장
+
+//원격 저장소 -->로컬로 이동
+git clone 주소 
+
+//내용 수정
+git commit --amend 
+
